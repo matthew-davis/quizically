@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+	Matthew Davis
+	Wittin Limited
+	01/09/2014
+-->
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="quizzically is the first game developed by Wittin. It's about bringing the fun back to the pub quiz. It removes the element of mobile cheating, cuts out lengthy marking delays and facilitates easier quiz creation. What could be better?">
+		<meta name="author" content="Wittin Ltd.">
+		<link rel="shortcut icon" href="favicon.ico" type="image/icon"> 
+		<link rel="icon" href="favicon.ico" type="image/icon">
+		<title>quizzically</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/console.css" rel="stylesheet">
+		<link href="css/metisMenu.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		
+		<script src="js/jquery-2.0.3.min.js"></script>
+		<script src="js/aesthetics/bootstrap.min.js"></script>
+		<script src="js/aesthetics/console.js"></script>
+		<script src="js/functionality/quiz.js"></script>
+		<script src='js/functionality/jquery.html5-placeholder-shim.js'></script>
+		
+		<!--[if lt IE 9]>
+			<script src="js/aesthetics/html5shiv.min.js"></script>
+			<script src="js/aesthetics/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	
+	<body>
+	
+		<div id="wrapper">
+
+			<!-- Navigation -->
+			<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+				<div class="navbar-header" style="padding: 3px">
+					<img src="img/console_logo.png" alt="quizzically logo">
+				</div>
+				
+				<!-- /.navbar-header -->
+				<ul class="nav navbar-top-links navbar-right">
+					<li><span id="user_name">x</span></li>
+					
+					<!-- /.dropdown-user -->
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+						</a>
+						<ul class="dropdown-menu dropdown-user">
+							<li><a href="profile.html"><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+							<li class="divider"></li>
+							<li><a href="index.html" id="logout_link"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+				<!-- /.navbar-top-links -->
+
+				<div class="navbar-default sidebar" role="navigation">
+					<div class="sidebar-nav navbar-collapse">
+						<ul class="nav" id="side-menu">
+							<li class="sidebar-search"></li>
+							<li><a href="home.html"><i class="fa fa-home fa-fw"></i> Home</a></li>
+							<li><a class="active" href="quiz.html"><i class="fa fa-pencil-square-o fa-fw"></i> Start a Quiz</a></li>
+							<li><a href="profile.html"><i class="fa fa-user fa-fw"></i> Update Your Profile</a></li>
+							<li><a href="purchase.html"><i class="fa fa-credit-card fa-fw"></i> Purchase More Quizzes</a></li>
+						</ul>
+						<br><br><br>
+						<div class="row">
+							<div class="col-lg-6" style="text-align: center;">
+								<a href="http://www.linkedin.com/company/wittin"><img src="img/icon_linkedin_48.png" alt="LinkedIn Link" border="0" /></a>
+							</div>	
+							<div class="col-lg-6" style="text-align: left;">	
+								<a href="https://www.facebook.com/pages/Quizzically/242247159263985"><img src="img/icon_facebook_48.png" alt="Facebook Link" border="0" /></a>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-lg-6" style="text-align: center;">
+								<a href="http://www.twitter.com/QuizzicallyUK"><img src="img/icon_twitter_48.png" alt="Twitter Link" border="0" /></a>
+							</div>	
+							<div class="col-lg-6" style="text-align: left;">	
+								&nbsp;
+							</div>
+						</div>
+					</div>
+					<!-- /.sidebar-collapse -->
+				</div>
+				<!-- /.navbar-static-side -->
+			</nav>
+			
+			<div id="page-wrapper">
+			
+				<div class="row">
+					<div class="col-lg-12" style="border-bottom: 1px solid #ddd">
+						<h2>Create a Quiz</h2>
+					</div>
+				</div>
+			
+				<div class="row">
+				
+					<div class="col-lg-9">
+						<div class="row">
+							<div class="col-lg-12">
+								<br>
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<i class="fa fa-pencil fa-2x"></i>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-lg-8 col-lg-offset-2">
+												<form role="form" id="quiz_form" name="quiz_form">
+													<fieldset>
+														<div class="form-group">
+															<input class="form-control" placeholder="How many Questions? (1-100)" name="quiz_questions" type="text" autofocus="">
+														</div>
+														<div class="form-group">
+															<input class="form-control" placeholder="Question Difficulty? (1-5)" name="quiz_difficulty" type="text" value="">
+														</div>
+														<div class="form-group">
+															<select class="form-control" name="quiz_location">
+																<option value="" disabled selected>Select Quiz Location</option>
+																<option value="40032">No Location</option>
+																<option value='40062'>Kendrew Barracks</option>
+                                                                <option value='40046'>Kinloss Barracks</option>
+                                                                <option value='40047'>Leuchars Station</option>
+                                                                <option value='40061'>RAF Boscombe Down</option>
+                                                                <option value='40048'>RAF Boulmer</option>
+                                                                <option value='40058'>RAF Brize Norton</option>
+                                                                <option value='40053'>RAF Cosford</option>
+                                                                <option value='40054'>RAF Cranwell</option>
+                                                                <option value='40064'>RAF Honington</option>
+                                                                <option value='40050'>RAF Linton</option>
+                                                                <option value='40045'>RAF Lossiemouth</option>
+                                                                <option value='40065'>RAF Marham</option>
+                                                                <option value='40059'>RAF Northolt</option>
+                                                                <option value='40063'>RAF Scampton</option>
+                                                                <option value='40052'>RAF Shawbury</option>
+                                                                <option value='40051'>RAF Valley</option>
+                                                                <option value='40057'>RAF Wittering</option>
+                                                                <option value='40056'>RAF Conningsby</option>
+                                                                <option value='40049'>RAF Leeming</option>
+                                                                <option value='40060'>RAF ST Mawgan</option>
+                                                                <option value='40055'>RAF Waddington</option>
+															</select>
+														</div>
+														<br>
+														<input class="btn btn-lg btn-primary btn-block" type="submit" value="Create Quiz" />
+													</fieldset>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-lg-3">				
+						<div class="row">
+							<div class="col-lg-12">
+								<br>
+								<div class="panel panel-green">
+									<div class="panel-heading">
+										<div class="row">
+											<div class="col-xs-3">
+												<i class="fa fa-pencil fa-4x"></i>
+											</div>
+											<div class="col-xs-9 text-right">
+												<div class="huge"><span id="quizzes_left">x</span></div>
+												<div>Quizzes to be Played</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<form action="purchase.html"><input class="btn btn-outline btn-danger btn-block" type="submit" value="Purchase More Quizzes" /></form>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-12">
+								<br>
+								<div class="panel panel-primary">
+									<div class="panel-heading">
+										<div class="row">
+											<div class="col-xs-3">
+												<img src="img/wittin_white_logo.png" alt="Wittin logo" />
+											</div>
+											<div class="col-xs-9 text-right">
+												<div class="huge">Wittin</div>
+											</div>
+										</div>
+									</div>
+									<div class="panel-body">
+										<p>Brought to you by the good folks at:</p>
+										<p><strong>Wittin Ltd.</strong><br>33 Naughton Road<br>Newport-On-Tay<br>DD6 8NG<br>Scotland - SC454658</p>
+										<p>quizzically@quizzically.co.uk</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			<!-- /#page-wrapper -->
+
+		</div>
+		<!-- /#wrapper -->
+
+		<script src="js/aesthetics/metisMenu.min.js"></script>
+
+	</body>
+	
+</html>

@@ -1,0 +1,3 @@
+<?PHP
+	$link->close();
+?>

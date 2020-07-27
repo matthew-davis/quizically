@@ -1,0 +1,27 @@
+
+input.error, input.error:focus{
+	border:1px solid #DD4B39;
+}
+
+span.error {
+	color: #DD4B39 !important;
+}
+
+label.error {
+	margin: 10px 15px;
+	color: #DD4B39;
+	font-weight: 700;
+	display: block !important;
+}
+
+input.success, input.success:focus{
+	border:1px solid #00A65A;
+}
+
+span.success {
+	color: #00A65A !important;
+}
+
+label.success {
+	display: none !important;
+}

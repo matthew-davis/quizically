@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!--
+	Matthew Davis
+	21/05/2014
+-->
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<title>quizzically</title>
+		
+		<link rel="stylesheet" type="text/css" href="http://www.quizzically.co.uk/quizzically/mobile_web/css/jquery.mobile-1.4.2.min.css">
+		<link rel="stylesheet" type="text/css" href="http://www.quizzically.co.uk/quizzically/mobile_web/css/quizzically.css">
+		
+		<script type="text/javascript" src="http://www.quizzically.co.uk/quizzically/mobile_web/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://www.quizzically.co.uk/quizzically/mobile_web/js/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="http://www.quizzically.co.uk/quizzically/mobile_web/js/mob_profile.js"></script>
+	</head>
+	
+    <body>
+<!--Page-5------------------------------------------------------------------------------------------------------------------------------>		
+		<div data-role="page" id="page5">
+			<div data-role="header" class="my-header">
+				<br>
+				<img src="http://www.quizzically.co.uk/quizzically/mobile_web/img/logo.png" width="95%" alt="logo" id="logo5" style="#">
+				<br><br>
+			</div>
+			<div data-role="content">
+				<form name ="mob_profile_form" id="mob_profile_form">
+					<div data-role="fieldcontain">
+						<input name="mob_profile_email" id="mob_profile_email" placeholder="Email" value="" type="email">
+						<input name="mob_profile_password" id="mob_profile_password" placeholder="Password" value="" type="password">
+						<input name="mob_repeat_password" id="mob_repeat_password" placeholder="Repeat Password" value="" type="password">
+					</div>
+					<div id="mob_profile_gender" data-role="fieldcontain" data-controltype="radiobuttons">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+                            <label for="mob_profile_radiom">Male</label>
+							<input id="mob_profile_radiom" name="mob_profile_gender" type="radio" value="M">
+							<label for="mob_profile_radiof">Female</label>
+							<input id="mob_profile_radiof" name="mob_profile_gender" type="radio" value="F">
+						</fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="mob_profile_birthday">Birthday</label>
+						<input name="mob_profile_birthday" id="mob_profile_birthday" value="" type="date">
+						<label for="mob_profile_location">Where do you live?</label>
+						<select name="mob_profile_location" id="mob_profile_location">
+							<option value="40032">No Location</option>
+							<option value="40000">Aberdeen City</option>
+							<option value="40001">Aberdeenshire</option>
+							<option value="40002">Angus</option>
+							<option value="40003">Argyll and Bute</option>
+							<option value="40004">City of Edinburgh</option>
+							<option value="40005">Clackmannanshire</option>
+							<option value="40006">Dumfries and Galloway</option>
+							<option value="40007">Dundee City</option>
+							<option value="40008">East Ayrshire</option>
+							<option value="40009">East Dunbartonshire</option>
+							<option value="40010">East Lothian</option>
+							<option value="40011">East Renfrewshire</option>
+							<option value="40012">Falkirk</option>
+							<option value="40013">Fife</option>
+							<option value="40014">Glasgow City</option>
+							<option value="40015">Highland</option>
+							<option value="40016">Inverclyde</option>
+							<option value="40017">Midlothian</option>
+							<option value="40018">Moray</option>
+							<option value="40019">Na h-Eileanan Siar</option>
+							<option value="40020">North Ayrshire</option>
+							<option value="40021">North Lanarkshire</option>
+							<option value="40022">Orkney Islands</option>
+							<option value="40023">Perth and Kinross</option>
+							<option value="40024">Renfrewshire</option>
+							<option value="40025">Scottish Borders</option>
+							<option value="40026">Shetland Islands</option>
+							<option value="40027">South Ayrshire</option>
+							<option value="40028">South Lanarkshire</option>
+							<option value="40029">Stirling</option>
+							<option value="40030">West Dunbartonshire</option>
+							<option value="40031">West Lothian</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" data-type="vertical" data-mini="true">
+							<label for="mob_profile_updates">Receive Email Updates?</label>
+							<input id="mob_profile_updates" name="mob_profile_updates" type="checkbox">
+						</fieldset>	
+					</div>
+					<input id="mob_profile_submit" type="submit" value="Update Profile" class="ui-btn ui-btn-b">
+				</form>
+				<br>
+			</div>
+		</div>
+
+		<script>		
+			var colours = ['#1BA0E1', '#F09709', '#D90073', '#FED700', '#A201FF', '#A15001', '#E51400', '#A2C138'];
+			document.getElementById("logo5").setAttribute("style", "background-color:" + colours[Math.floor(Math.random() * colours.length)]);
+		</script>
+		
+    </body>
+	
+</html>

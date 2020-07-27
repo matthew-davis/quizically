@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contact Us</title>
+<script language="javascript">
+function validate()
+{
+	if(document.getElementById("fullname").value=='')
+	{
+		alert("Please provide your full name");
+		document.getElementById("fullname").focus();
+		return false;
+	}
+	if(document.getElementById("email").value=='')
+	{
+		alert("Please provide email address");
+		document.getElementById("email").focus();
+		return false;
+	}
+	if(document.getElementById("subject").value=='')
+	{
+		alert("Please provide subject line");
+		document.getElementById("subject").focus();
+		return false;
+	}
+	if(document.getElementById("query").value=='')
+	{
+		alert("Please enter your query");
+		document.getElementById("query").focus();
+		return false;
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<form name="form" method="post" action="contact.php">
+  <table width="100%" border="0" align="center" cellpadding="3" cellspacing="1">
+    <tbody>    
+    <tr><td colspan="3" align="center"><h2>Contact Us</h2></td></tr> 
+      <tr>
+        <td width="39%" align="right" ><strong>Full Name<font color="#ff0000"> *</font></strong></td>
+        <td width="1%" ><div align="center">:</div></td>
+        <td width="60%" height="25"><input type="text" name="fullname" id="fullname" /></td>
+      </tr>
+      <tr>
+        <td width="39%" align="right" ><strong>Email<font color="#ff0000"> *</font></strong></td>
+        <td width="1%" ><div align="center">:</div></td>
+        <td width="60%" height="25"><input type="text" name="email" id="email" /></td>
+      </tr>
+      <tr>
+        <td align="right"><strong>Subject<font color="#ff0000"> *</font></strong></td>
+        <td ><div align="center">:</div></td>
+        <td height="25"><input type="text" name="subject" id="subject" /></td>
+      </tr>
+      <tr>
+        <td align="right" valign="top"><strong>Please Type Your Query If Any<font color="#ff0000"> *</font> </strong></td>
+        <td ><div align="center">:</div></td>
+        <td height="25"><textarea name="query" id="query" rows="5" cols="30"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="right"></td><td><input name="btnSubmit" type="submit" onclick="javascript: return validate();"  value="Submit" /></td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+</body>
+</html>

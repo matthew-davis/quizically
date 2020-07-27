@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+	Matthew Davis
+	21/05/2014
+-->
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1">
+		<title>quizzically</title>
+		
+		<link rel="stylesheet" type="text/css" href="http://www.quizzically.co.uk/quizzically/mobile_web/css/jquery.mobile-1.4.2.min.css">
+		<link rel="stylesheet" type="text/css" href="http://www.quizzically.co.uk/quizzically/mobile_web/css/quizzically.css">
+		
+		<script type="text/javascript" src="http://www.quizzically.co.uk/quizzically/mobile_web/js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="http://www.quizzically.co.uk/quizzically/mobile_web/js/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="http://www.quizzically.co.uk/quizzically/mobile_web/js/mob_index.js"></script>
+	</head>
+	
+    <body>
+<!--Page-1------------------------------------------------------------------------------------------------------------------------------>
+		<div data-role="page" id="page1">
+			<div data-role="header" class="my-header">
+				<br>
+				<img src="http://www.quizzically.co.uk/quizzically/mobile_web/img/logo.png" width="95%" alt="logo" id="logo1" style="#">
+				<br><br>
+			</div>
+			<div data-role="content" class="ui-content">	
+				<form name ="mob_login_form" id="mob_login_form">
+					<div data-role="fieldcontain">					
+						<input name="mob_login_email" id="mob_login_email" placeholder="Email" type="email">								
+						<input name="mob_login_password" id="mob_login_password" placeholder="Password" type="password">								
+						<input id="mob_login_submit" type="submit" value="Login" class="ui-btn ui-btn-b">
+					</div>
+				</form>
+				<form id="mob_register_button"><input id="mob_register_button_x" type="submit" value="Register" class="ui-btn ui-shadow ui-corner-all"></form>
+				<form id="mob_forgot_button"><input id="mob_forgot_button_x" type="submit" value="Forgot Password?" class="ui-btn ui-shadow ui-corner-all"></form>
+				<br>
+			</div>		
+		</div> 
+
+		<script>		
+			var colours = ['#1BA0E1', '#F09709', '#D90073', '#FED700', '#A201FF', '#A15001', '#E51400', '#A2C138'];
+			document.getElementById("logo1").setAttribute("style", "background-color:" + colours[Math.floor(Math.random() * colours.length)]);
+		</script>
+		
+    </body>
+	
+</html>
